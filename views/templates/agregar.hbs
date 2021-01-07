@@ -1,0 +1,39 @@
+<div class="row m-0 justify-content-center align-items-center vh-100">    
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                INGRESAR DATOS DE LA PERSONA
+            </div>
+            <div class="card-body">
+                <center>
+                    <img src="/img/logo.png" class="img-fluid" alt="Responsive image">
+                </center>
+                <form action="/personas/agregar" method="POST">
+                    <div class="form-group">
+                        <label for="cui">CUI:</label>
+                        <input type="text" name="cui" id="cui" value="" class="form-control" placeholder="CUI">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" value="" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" value="" placeholder="Apellido" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="profesion">Profesión:</label>
+                        <input type="text" name="profesion" id="profesion" value="" class="form-control" placeholder="Profesión">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad" value="" class="form-control" placeholder="Edad">
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

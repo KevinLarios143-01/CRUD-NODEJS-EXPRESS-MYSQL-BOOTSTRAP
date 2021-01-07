@@ -1,0 +1,36 @@
+ <div class="row m-0 justify-content-center align-items-center vh-100">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                INGRESAR DATOS DEL PROFESOR
+            </div>
+            <div class="card-body">
+                ​<center><picture>
+                    <img src="/img/logo.png" class="img-fluid img-thumbnail" alt="...">
+                </picture></center>
+                
+                <form action="/profesores/agregarP" method="POST">
+                    <div class="form-group">
+                        <label for="dpi">CUI:</label>
+                        <input type="text" name="dpi" id="dpi" value="" class="form-control" placeholder="DPI" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" value="" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" value="" placeholder="Apellido" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">AÑo Nacimiento:</label>
+                        <input type="number" name="fecha" id="fecha" value="" class="form-control" placeholder="YYYY" required>
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>        

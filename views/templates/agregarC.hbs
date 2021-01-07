@@ -1,0 +1,57 @@
+<div class="row m-0 justify-content-center align-items-center vh-100">    
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                INGRESAR DATOS DE LA CLASE
+            </div>
+            <div class="card-body">
+                
+                <center>
+                    <img src="/img/logo.png" class="img-fluid" alt="Responsive image">
+                </center>
+                <form action="/clases/agregarC" method="POST">
+                    <div class="form-group">
+                        <label for="idc">IdClase:</label>
+                        <input type="text" name="idc" id="idc" value="" class="form-control" placeholder="IDClase">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" value="" class="form-control" placeholder="Nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prodip">Profesor:</label>
+                        <select name="prodip" id="prodip" class="form-control">
+                            {{#each clase}}
+                            <option value="{{this.DPI}}">
+                                
+                                    ID: "{{this.DPI}}"  -> {{this.NombreP}}  {{this.ApellidoP}}
+                                 
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="hordis">Horario:</label>
+                            <select name="hordis" id="hordis" class="form-control">
+                                {{#each clase}}
+                                <option value="{{this.idHorarios}}">   
+                                    ID: "{{this.idHorarios}}"  -> {{this.Dia}} Inicia: {{this.horaInicio}} Termina: {{this.HoraFin}}
+                                </option>
+                                {{/each}}
+
+                            </select>
+
+                        <a href="" class="btn btn-sm btn-warning">Agregar</a>
+                   
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+                  
+            </div>
+        </div>
+    </div>
+</div>

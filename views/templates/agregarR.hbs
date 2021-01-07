@@ -1,0 +1,44 @@
+<div class="row m-0 justify-content-center align-items-center vh-100">    
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                INGRESAR REPORTE
+            </div>
+            <div class="card-body">
+                <center>
+                    <img src="/img/logo.png" class="img-fluid" alt="Responsive image">
+                </center>
+                <form action="/reportes/agregarR" method="POST">
+                    <div class="form-group">
+                        <label for="moti">Motivo:</label>
+                        <textarea class="form-control" name="moti" id="moti" cols="20" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="prodip">Maestro:</label>
+                        <select name="prodip" id="prodip" class="form-control">
+                            {{#each reporte}}
+                            <option value="{{this.DPI}}">                               
+                                    ID: "{{this.DPI}}"  -> {{this.NombreP}}  {{this.ApellidoP}}
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alcui">Alumno:</label>
+                        <select name="alcui" id="alcui" class="form-control">
+                            {{#each reporte}}
+                            <option value="{{this.CUI}}">                                
+                                    ID: "{{this.CUI}}"  -> {{this.NombreA}}  {{this.ApellidoA}}                               
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

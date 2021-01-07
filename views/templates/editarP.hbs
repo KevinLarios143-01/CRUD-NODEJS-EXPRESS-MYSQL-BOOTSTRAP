@@ -1,0 +1,31 @@
+ <div class="row m-0 justify-content-center align-items-center vh-100">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                EDITAR DATOS DEl PROFESOR
+            </div>
+            
+            <div class="card-body">
+                {{#each profesor}}
+                <form action="/profesores/editarP/{{this.DPI}}" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" value="{{this.Nombre}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" value="{{this.Apellido}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Año Nacimiento:</label>
+                        <input type="number" name="fecha" id="fecha" value="{{this.Fecha}}" class="form-control">
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+ </div>

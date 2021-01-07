@@ -1,0 +1,32 @@
+ <div class="row m-0 justify-content-center align-items-center vh-100">
+ <div class="container mt-5">
+    <table class="table table-dark table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">CUI</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Año  Nacimiento</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each alumno}}
+        <tr>
+          <th scope="row">{{this.CUI}}</th>
+          <td>{{this.NombreA}}</td>
+          <td>{{this.ApellidoA}}</td>
+          <td>{{this.Fecha}}</td>
+          <td>
+              <a href="/alumnos/editarA/{{this.CUI}}" class="btn btn-sm btn-warning">Editar</a>
+              <a href="/alumnos/eliminar/{{this.CUI}}" class="btn btn-sm btn-danger">Eliminar</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <center>
+      <a href="/alumnos/agregarA" class="btn btn-lg btn-primary" >Agregar</a>
+    </center>
+  </div>
+</div>  

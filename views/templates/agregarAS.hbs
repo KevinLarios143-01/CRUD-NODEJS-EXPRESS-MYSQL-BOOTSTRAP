@@ -1,0 +1,49 @@
+<div class="row m-0 justify-content-center align-items-center vh-100">    
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                INGRESAR ASISTENCIA
+            </div>
+            <div class="card-body">
+                <center>
+                    <img src="/img/logo.png" class="img-fluid" alt="Responsive image">
+                </center>
+                <form action="/asistencias/agregarAS" method="POST">
+                    <div class="form-group">
+                        <label for="prodip">Maestro:</label>
+                        <select name="prodip" id="prodip" class="form-control">
+                            {{#each asistencia}}
+                            <option value="{{this.DPI}}">                               
+                                    ID: "{{this.DPI}}"  -> {{this.NombreP}}  {{this.ApellidoP}}
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alcui">Alumno:</label>
+                        <select name="alcui" id="alcui" class="form-control">
+                            {{#each asistencia}}
+                            <option value="{{this.CUI}}">                                
+                                    ID: "{{this.CUI}}"  -> {{this.NombreA}}  {{this.ApellidoA}}                               
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="clasi">Clase:</label>
+                        <select name="clasi" id="clasi" class="form-control">
+                            {{#each asistencia}}
+                            <option value="{{this.idClases}}">       
+                                    ID: "{{this.idClases}}"  -> {{this.NombreClase}}
+                            </option>
+                           {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
