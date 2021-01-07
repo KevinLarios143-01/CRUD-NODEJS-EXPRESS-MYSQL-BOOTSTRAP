@@ -27,33 +27,6 @@ router.get('/agregarC', (req,res)=>{
 
 
 
-
-
-router.get('/editarC/:id',(req,res)=>{
-    connection.query(queries.clase(req.params.id),(err,result)=>{
-        if(err){
-            console.log(err);
-        }else{
-            res.render('templates/editarC',{clase:result});
-        }
-    })
-})
-router.post('/editarC/:id',(req,res)=>{
-    var data={
-        id: req.params.idc,
-        nombre:req.body.nombre,
-        prodip: req.body.prodip,
-        hordis: req.body.hordis
-    }
-    connection.query(queries.actualizar(data),(err,result)=>{
-        if(err){
-            console.log(err);
-        }else{
-            res.redirect('/clases/lista');
-        }
-    })
-})
-
 router.get('/eliminar/:id',(req,res)=>{
     connection.query(queries.eliminar(req.params.id),(err,result)=>{
         if(err){

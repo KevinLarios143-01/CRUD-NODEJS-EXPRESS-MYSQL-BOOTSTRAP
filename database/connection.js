@@ -1,5 +1,11 @@
 var mysql= require('mysql');
-var cnx = mysql.createConnection({host: "SG-curso2-3712-mysql-master.servers.mongodirector.com", user: 'sgroot', password: 'pnU4n4rCotB@lsMm', database: curso2, port: 3306});
+var cnx=mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Churumico2018*',
+    database: 'curso2',
+    multipleStatements: true
+});
 
 cnx.connect(err =>{
     if(!err){
